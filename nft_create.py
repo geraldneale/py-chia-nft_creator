@@ -4,11 +4,11 @@ import requests
 
 fprint = "790396907"
 wallet = 4
-originals_path = "/home/gneale/Programming/nft0/files/originals/"
-tmp_files__path = "/home/gneale/Programming/nft0/files/"
+originals_path = "./files/originals/"
+tmp_files__path = "./files/"
 royalty_address = "txch150trmj9g08555k3qaptn0sl5dseq0recwmvgn73cdtch2dc3t0ksjuespy"
 target_address = "txch150trmj9g08555k3qaptn0sl5dseq0recwmvgn73cdtch2dc3t0ksjuespy"
-lower_limit, upper_limit = 10, 13
+lower_limit, upper_limit = 50, 53
 series_total = 726
 
 
