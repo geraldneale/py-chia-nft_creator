@@ -1,6 +1,4 @@
 import subprocess
-import time
-import asyncio
 import hashlib
 import requests
 
