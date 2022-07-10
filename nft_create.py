@@ -5,9 +5,11 @@ import requests
 fprint = "790396907"
 wallet = 4
 originals_path = "/home/gneale/Programming/nft0/files/originals/"
+tmp_files__path = "/home/gneale/Programming/nft0/files/"
 royalty_address = "txch150trmj9g08555k3qaptn0sl5dseq0recwmvgn73cdtch2dc3t0ksjuespy"
 target_address = "txch150trmj9g08555k3qaptn0sl5dseq0recwmvgn73cdtch2dc3t0ksjuespy"
 lower_limit, upper_limit = 10, 13
+series_total = 726
 
 
 def create_nft(num, nlink, mlink, wallet, nhash, mhash):
@@ -24,7 +26,7 @@ def create_nft(num, nlink, mlink, wallet, nhash, mhash):
         "-mh", mhash,
         "-lu", "https://raw.githubusercontent.com/Chia-Network/chia-blockchain/main/LICENSE",
         "-lh", "30a358857da6b49f57cfe819c1ca43bfe007f528eb784df5da5cb64577e0ffc6", 
-        "-sn", str(num), "-st", "726", 
+        "-sn", str(num), "-st", str(series_total), 
         "-rp", str(num), "-m" "0.0001"
         ])
     finally:
@@ -43,7 +45,7 @@ def yes_or_no(question):
 
 def get_online_hash(image_number, url, filename):
      response = requests.get(url)
-     filename = filename + "tmp"
+     filename = tmp_files__path + filename + "_local.tmp"
      open(filename, "wb").write(response.content)
      with open(filename,"rb") as f:
           bytes = f.read()
