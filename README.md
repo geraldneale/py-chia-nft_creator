@@ -13,6 +13,8 @@ Clone repository and go into it.
 ```
 $ git clone https://github.com/geraldneale/py-chia-nft_creator.git
 $ cd py-chia-nft_creator
+$ mkdir files
+$ mkdir files/originals
 ```
 
 Run
