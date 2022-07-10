@@ -7,6 +7,7 @@ wallet = 4
 originals_path = "/home/gneale/Programming/nft0/files/originals/"
 royalty_address = "txch150trmj9g08555k3qaptn0sl5dseq0recwmvgn73cdtch2dc3t0ksjuespy"
 target_address = "txch150trmj9g08555k3qaptn0sl5dseq0recwmvgn73cdtch2dc3t0ksjuespy"
+lower_limit, upper_limit = 10, 13
 
 
 def create_nft(num, nlink, mlink, wallet, nhash, mhash):
@@ -59,7 +60,7 @@ def get_local_hash(image_number, originals_path, filename):
           return readable_hash                        
 
 if __name__=='__main__':
-    for num in range(20,100):
+    for num in range(lower_limit, upper_limit):
         for ext in ["png","json"]:
             filename = "gneale-san_francisco{}.{}".format(num, ext)
             url = "https://mojopuzzler.org/nft/gnsf/gneale-san_francisco{}.{}".format(num, ext)
@@ -77,3 +78,5 @@ if __name__=='__main__':
             nlink = "https://mojopuzzler.org/nft/gnsf/gneale-san_francisco{}.png".format(num)
             mlink = "https://mojopuzzler.org/nft/gnsf/gneale-san_francisco{}.json".format(num)
             create_nft(num, nlink, mlink, wallet, nhash, mhash)
+        else:
+            break    
