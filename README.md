@@ -15,6 +15,8 @@ $ git clone https://github.com/geraldneale/py-chia-nft_creator.git
 $ cd py-chia-nft_creator
 $ mkdir files
 $ mkdir files/originals
+NOTE: make sure you have the chia-blockchain environment activated
+$ pip3 install requests
 ```
 
 Run
