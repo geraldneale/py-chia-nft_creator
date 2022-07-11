@@ -3,7 +3,7 @@ import json
 huns = 0
 tens = 0
 release = "Up To One Hundred"
-path = "/home/gneale/Pictures/nft-sf/first_hundred"
+path = "/home/gneale/Pictures/nft-sf/first_hundred/"
 
 def print_json(dict):
     print(json.dumps(dict, sort_keys=True, indent=4))
