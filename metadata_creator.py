@@ -2,17 +2,20 @@ import json
 
 huns = 0
 tens = 0
-release = "Up To One Hundred"
-path = "/home/gneale/Pictures/nft-sf/first_hundred/"
+release = "Life Seeking Darkness"
+path = "/home/gneale/Pictures/nft-sf/life_seeking_darkness/"
 
 def print_json(dict):
     print(json.dumps(dict, sort_keys=True, indent=4))
 
-for num in range (10,100):
+for num in range (200,300):
     if num < 10:
         x = "{}{}{}".format(huns, tens, num)
+    elif num < 100:
+        x = "{}{}".format(huns, num) 
     else:
-        x = "{}{}".format(huns, num)       
+        x = "{}".format(num)   
+    
     md = {
     "series_number": num,
     "series_total": 726,
